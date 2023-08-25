@@ -1,7 +1,7 @@
 import "./App.css";
 import { CssBaseline, ThemeProvider, Box } from "@mui/material";
 import { IconButton, useTheme, InputBase } from "@mui/material";
-
+import { useSelector } from "react-redux";
 import {
   BrowserRouter as Router,
   Routes,
@@ -12,24 +12,9 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useMode } from "./theme";
 
-import WbSunnyIcon from "@mui/icons-material/WbSunny";
-import NightlightIcon from "@mui/icons-material/Nightlight";
-
-import { useDispatch, useSelector } from "react-redux";
-import { toggleTheme } from "./redux/action";
-
+import TopBar from "./components/TopBar";
 function App() {
   const [theme, colorMode] = useMode();
-  const mode = useSelector((state) => state.mode.currentMode);
-  const dispatch = useDispatch();
-  const handleMode = (event) => {
-    if (mode === "dark") {
-      dispatch(toggleTheme("light"));
-    } else {
-      dispatch(toggleTheme("dark"));
-    }
-  };
-
   return (
     <Router>
       <ThemeProvider theme={theme}>
@@ -41,17 +26,9 @@ function App() {
             position="sticky"
             top={0}
             zIndex={1000}
-            bgcolor="white"
             boxShadow="0px 1px 5px rgba(0, 0, 0, 0.1)"
           >
-            This is the header.
-            <IconButton
-              className="mx-2 text-light"
-              sx={{ width: 45, height: 45 }}
-              onClick={handleMode}
-            >
-              {mode === "dark" ? <NightlightIcon /> : <WbSunnyIcon />}
-            </IconButton>
+            <TopBar />
           </Box>
 
           <Box
