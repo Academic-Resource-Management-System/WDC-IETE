@@ -27,6 +27,11 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import img from "../android-chrome-192x192.png";
 import img1 from "../DD2.png";
+
+import { useTheme } from "@mui/material";  
+import { tokens } from "../theme";
+
+
 const pages = [
   "Home",
   "About",
@@ -44,6 +49,16 @@ function TopBar() {
   const dispatch = useDispatch();
   const mode = useSelector((state) => state.mode.currentMode);
 
+
+
+
+  
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
+
+
+  
   const handleMode = (event) => {
     if (mode === "dark") {
       dispatch(toggleTheme("light"));
