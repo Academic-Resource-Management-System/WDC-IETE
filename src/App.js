@@ -11,6 +11,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useMode } from "./theme";
 import AboutUs from "./components/AboutUs";
+import Contact from "./components/Contact";
 import TopBar from "./components/TopBar";
 function App() {
   const [theme, colorMode] = useMode();
@@ -33,6 +34,7 @@ function App() {
           <Box display="flex" flexDirection="column" flexGrow={1} py={2}>
             <Routes>
               <Route path="/about" element={<AboutUs />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<div>tesct</div>} />
             </Routes>
           </Box>

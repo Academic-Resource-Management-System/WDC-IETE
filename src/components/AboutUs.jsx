@@ -3,7 +3,7 @@ import { Grid, Paper, Typography, Avatar } from "@mui/material";
 const AboutUs = () => {
   return (
     <>
-      <div className="container-fluid bg-dark w-100 py-3 ps-4">
+      <div className="container-fluid bg-dark w-100 py-3 ">
         <Typography
           variant="h2"
           style={{
@@ -113,13 +113,27 @@ const AboutUs = () => {
               style={{ overflowWrap: "break-word", textAlign: "justify" }}
             >
               Vision: Reaching the un-reached and empowering the youth through
-              Technical Education and Skill Development. Mission: Advancement of
-              Electronics, Telecommunication, Information Technology & other
-              related disciplines to contribute in Nation’s Human Resource &
-              Infrastructure Development through our Engineers. Motives: IETE is
-              helping it's students to learn and grow in the emerging field of
-              Electronics and Telecommunication. One of the missions of IETE is
-              to provide the best mode of studying a Btech degree programme.
+              Technical Education and Skill Development.
+            </Typography>
+            <Typography
+              variant="h5"
+              className="mt-1"
+              style={{ overflowWrap: "break-word", textAlign: "justify" }}
+            >
+              Mission: Advancement of Electronics, Telecommunication,
+              Information Technology & other related disciplines to contribute
+              in Nation’s Human Resource & Infrastructure Development through
+              our Engineers.
+            </Typography>{" "}
+            <Typography
+              variant="h5"
+              className="mt-2"
+              style={{ overflowWrap: "break-word", textAlign: "justify" }}
+            >
+              Motives: IETE is helping it's students to learn and grow in the
+              emerging field of Electronics and Telecommunication. One of the
+              missions of IETE is to provide the best mode of studying a Btech
+              degree programme.
             </Typography>
           </Grid>
         </Grid>
