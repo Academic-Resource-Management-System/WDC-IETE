@@ -1,4 +1,3 @@
-import "./App.css";
 import { CssBaseline, ThemeProvider, Box } from "@mui/material";
 import { IconButton, useTheme, InputBase } from "@mui/material";
 import { useSelector } from "react-redux";
@@ -11,7 +10,7 @@ import {
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useMode } from "./theme";
-
+import AboutUs from "./components/AboutUs";
 import TopBar from "./components/TopBar";
 function App() {
   const [theme, colorMode] = useMode();
@@ -31,14 +30,11 @@ function App() {
             <TopBar />
           </Box>
 
-          <Box
-            display="flex"
-            flexDirection="row"
-            flexGrow={1}
-            bgcolor="#f0f0f0"
-            p={3}
-          >
-            This is the body.
+          <Box display="flex" flexDirection="column" flexGrow={1} py={2}>
+            <Routes>
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/" element={<div>tesct</div>} />
+            </Routes>
           </Box>
 
           {/* Footer */}

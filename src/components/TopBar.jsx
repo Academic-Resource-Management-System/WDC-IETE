@@ -27,10 +27,8 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import img from "../android-chrome-192x192.png";
 import img1 from "../DD2.png";
-
-import { useTheme } from "@mui/material";  
-import { tokens } from "../theme";
-
+import { Link } from "react-router-dom";
+import { tokens } from "../theme";
 
 const pages = [
   "Home",
@@ -38,27 +36,28 @@ const pages = [
   "Events",
   "Executive Committee",
   "Membership",
-  "About",
   "chencon",
   "Chenlink News Letter",
   "Contact",
 ];
-
+const pagesLink = [
+  "/",
+  "about",
+  "events",
+  "committee",
+  "membership",
+  "chencon",
+  "Chenlink",
+  "contact",
+];
 function TopBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const dispatch = useDispatch();
   const mode = useSelector((state) => state.mode.currentMode);
 
-
-
-
-  
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
-
-
-  
   const handleMode = (event) => {
     if (mode === "dark") {
       dispatch(toggleTheme("light"));
@@ -132,12 +131,14 @@ function TopBar() {
                 onKeyDown={toggleDrawer(false)}
               >
                 <List>
-                  {pages.map((page) => (
-                    <ListItem button key={page}>
-                      <ListItemText>
-                        <Typography>{page}</Typography>
-                      </ListItemText>
-                    </ListItem>
+                  {pages.map((page, i) => (
+                    <Link to={`${pagesLink[i]}`}>
+                      <ListItem button key={page}>
+                        <ListItemText>
+                          <Typography>{page}</Typography>
+                        </ListItemText>
+                      </ListItem>
+                    </Link>
                   ))}
                 </List>
               </div>
@@ -163,14 +164,16 @@ function TopBar() {
             IETE
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
+            {pages.map((page, i) => (
+              <Link to={`${pagesLink[i]}`}>
+                <Button
+                  key={page}
+                  //   onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  <Typography>{page}</Typography>
+                </Button>
+              </Link>
             ))}
           </Box>
 
