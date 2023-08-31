@@ -82,19 +82,23 @@ function TopBar() {
 
     setIsDrawerOpen(open);
   };
-
+  console.log(colors.topbar[100]);
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
+    <AppBar position="static" style={{ backgroundColor: colors.topbar[100] }}>
+      <Container className="py-md-3" maxWidth="xl">
         <Toolbar disableGutters>
           <Avatar
             alt="Cindy Baker"
             src={img1}
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+            sx={{
+              display: { xs: "none", md: "flex" },
+              mr: 1,
+              width: 56,
+              height: 56,
+            }}
           />
           <Typography
             variant="h6"
-            noWrap
             component="a"
             href="/"
             sx={{
@@ -102,12 +106,15 @@ function TopBar() {
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
+              //  letterSpacing: ".1rem",
+              color: colors.topbar[200],
+              width: "200px",
               textDecoration: "none",
+              flex: 1,
+              overflowWrap: "break-word",
             }}
           >
-            IETE
+            The Institution of Electronics and Telecommunication Engineers
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -157,19 +164,25 @@ function TopBar() {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: colors.topbar[200],
               textDecoration: "none",
             }}
           >
             IETE
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "space-evenly",
+            }}
+          >
             {pages.map((page, i) => (
               <Link to={`${pagesLink[i]}`}>
                 <Button
                   key={page}
                   //   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, display: "block" }}
                 >
                   <Typography>{page}</Typography>
                 </Button>
@@ -181,10 +194,14 @@ function TopBar() {
             <Tooltip title="Mode">
               <IconButton
                 className="mx-2 text-light"
-                sx={{ width: 45, height: 45 }}
+                sx={{ width: 45, height: 45, color: colors.topbar[200] }}
                 onClick={handleMode}
               >
-                {mode === "dark" ? <NightlightIcon /> : <WbSunnyIcon />}
+                {mode === "dark" ? (
+                  <NightlightIcon style={{ color: colors.topbar[200] }} />
+                ) : (
+                  <WbSunnyIcon style={{ color: colors.topbar[200] }} />
+                )}
               </IconButton>
             </Tooltip>
           </Box>

@@ -1,9 +1,12 @@
 import React from "react";
-import { Grid, Paper, Typography, Avatar } from "@mui/material";
+import { Grid, Paper, Typography, Avatar, useTheme } from "@mui/material";
+import { tokens } from "../theme";
 const AboutUs = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   return (
     <>
-      <div className="container-fluid bg-dark w-100 py-3 ">
+      <div className="container-fluid  w-100 py-3 ">
         <Typography
           variant="h2"
           style={{
@@ -20,7 +23,7 @@ const AboutUs = () => {
           About Us
         </Typography>
       </div>
-      <div className="container bg-dark w-100 py-3 ">
+      <div className="container  w-100 py-3 ">
         <Grid
           container
           spacing={2}
@@ -138,7 +141,7 @@ const AboutUs = () => {
           </Grid>
         </Grid>
       </div>
-      <div className="container-fluid bg-dark w-100 py-3 ">
+      <div className="container-fluid w-100 py-3 ">
         <Grid
           container
           spacing={2}
@@ -230,7 +233,7 @@ const AboutUs = () => {
           </Grid>
         </Grid>
       </div>
-      <div className="container bg-dark">
+      <div className="container">
         <Grid container spacing={2}>
           <Grid item xs={12} md={12}>
             <Typography
@@ -256,11 +259,12 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
+                alt="Sri Venkateswara College of Engineering, Sriperambadur"
+                src="https://th.bing.com/th/id/OIP.WT5izKZbPj2CMvjho8JqHAAAAA?w=146&h=155&c=7&r=0&o=5&dpr=1.3&pid=1.7"
                 sx={{ width: 56, height: 56 }}
               />
               <Typography
@@ -279,11 +283,12 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
+                alt="Panimalar Institute of Technology"
+                src="https://th.bing.com/th/id/OIP.3dK96mtkrDxLR36TmokzOwAAAA?w=141&h=168&c=7&r=0&o=5&dpr=1.3&pid=1.7"
                 sx={{ width: 56, height: 56 }}
               />
               <Typography
@@ -302,11 +307,12 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
+                alt="Easwari Engineering College"
+                src="https://th.bing.com/th/id/OIP.7SoD977qkXqXbHuJ_5IkFwHaHa?w=162&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
                 sx={{ width: 56, height: 56 }}
               />
               <Typography
@@ -325,11 +331,12 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
+                alt="Veltech Multi Engineering College"
+                src="https://th.bing.com/th/id/OIP.VBXeeRXiAtyJNxfDGiEPGgHaHa?w=168&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
                 sx={{ width: 56, height: 56 }}
               />
               <Typography
@@ -348,11 +355,12 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
+                alt="SRM Institute of Science and Technology"
+                src="https://th.bing.com/th/id/OIP.FP-z3Ta4KmKo_PYN7P8uWAAAAA?w=167&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
                 sx={{ width: 56, height: 56 }}
               />
               <Typography
@@ -372,11 +380,12 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
+                alt="Jeppiar Institute of Technology"
+                src="https://th.bing.com/th/id/OIP.xMPypJOCgcVBaVNibLVOOgAAAA?w=136&h=165&c=7&r=0&o=5&dpr=1.3&pid=1.7"
                 sx={{ width: 56, height: 56 }}
               />
               <Typography
@@ -395,10 +404,11 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
+                alt="RMK College of Engineering and Technology"
                 src="/static/images/avatar/1.jpg"
                 sx={{ width: 56, height: 56 }}
               />
@@ -418,10 +428,11 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
+                alt="Velammal Engineering College"
                 src="/static/images/avatar/1.jpg"
                 sx={{ width: 56, height: 56 }}
               />
@@ -441,11 +452,12 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
+                alt="KCG College of Technology"
+                src="https://th.bing.com/th/id/OIP.uLDE8K_XKOEH8mzHXwCPGgHaHa?w=170&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
                 sx={{ width: 56, height: 56 }}
               />
               <Typography
@@ -464,11 +476,12 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
+                alt="Dr Rangarajan Dr Sakunthala Engg College"
+                src="https://th.bing.com/th/id/OIP.dgrel_9JYsTsX9KgZlg0UgAAAA?w=141&h=150&c=7&r=0&o=5&dpr=1.3&pid=1.7"
                 sx={{ width: 56, height: 56 }}
               />
               <Typography
@@ -488,11 +501,12 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
+                alt="Saveetha Engineering College"
+                src="https://th.bing.com/th/id/OIP.5RvGjgir5-ud0FFYAfS4mAHaHZ?w=177&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
                 sx={{ width: 56, height: 56 }}
               />
               <Typography
@@ -511,6 +525,31 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
+              }}
+            >
+              <Avatar
+                alt="Dr. M G R Educational & Research Institute"
+                src="https://th.bing.com/th/id/OIP.ONq-5LRXgXGs7_Z-I6cnEgAAAA?w=166&h=131&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                sx={{ width: 56, height: 56 }}
+              />
+              <Typography
+                variant="h5"
+                className="ps-3 py-2"
+                style={{ flex: 1, overflowWrap: "break-word" }}
+              >
+                Dr. M G R Educational & Research Institute
+              </Typography>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Paper
+              className="px-2 py-3 "
+              style={{
+                width: "100%",
+                display: "flex",
+                alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
@@ -534,34 +573,12 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
-                sx={{ width: 56, height: 56 }}
-              />
-              <Typography
-                variant="h5"
-                className="ps-3 py-2"
-                style={{ flex: 1, overflowWrap: "break-word" }}
-              >
-                Dr. M G R Educational & Research Institute
-              </Typography>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Paper
-              className="px-2 py-3 "
-              style={{
-                width: "100%",
-                display: "flex",
-                alignItems: "center", // Center vertically
-              }}
-            >
-              <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
+                alt="DMI College of Engineering"
+                src="https://th.bing.com/th/id/OIP.wmfVvNhnjhtAvpUYMnQNeAD6D6?w=181&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
                 sx={{ width: 56, height: 56 }}
               />
               <Typography
@@ -583,11 +600,12 @@ const AboutUs = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
+                alt="MISRIMAL NAVAJEE MUNOTH JAIN ENGINEERING COLLEGE"
+                src="https://th.bing.com/th/id/OIP.qwHe5EUHhVchXIi4YOfjRgAAAA?w=136&h=132&c=7&r=0&o=5&dpr=1.3&pid=1.7"
                 sx={{ width: 56, height: 56 }}
               />
               <Typography

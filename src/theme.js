@@ -21,36 +21,14 @@ export const themeSettings = (mode) => {
     mode: mode,
     ...(mode === "light"
       ? {
-          primary: {
-            main: "#333A62",
-          },
-          secondary: {
-            main: "#333A62",
-          },
-          neutral: {
-            dark: "#333A62",
-            main: "#333A62",
-            light: "#333A62",
-          },
           background: {
-            default: "#333A62",
+            default: "#F0F2F5",
           },
         }
       : {
-          primary: {
-            main: "#333A62",
+          background: {
+            default: "#1a2035",
           },
-          secondary: {
-            main: "#333A62",
-          },
-          neutral: {
-            dark: "#333A62",
-            main: "#333A62",
-            light: "#333A62",
-          },
-          // background: {
-          //default: colors.primarylight[900],
-          // },
         }),
   };
 

@@ -97,7 +97,7 @@ const Contact = () => {
             <TextField
               id="Name"
               label="Your Name"
-              className=" w-100"
+              className=" w-100 mt-2"
               variant="filled"
             />
             <div className="d-md-flex">
