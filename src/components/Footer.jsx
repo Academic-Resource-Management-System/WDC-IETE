@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Box } from '@mui/material';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import { AiFillHome, AiOutlineTeam } from 'react-icons/ai';
+import { FcAbout } from 'react-icons/fc';
+import { MdEmojiEvents } from 'react-icons/md';
+import { IoCall } from 'react-icons/io5';
 
 const Footer = () => {
   return (
@@ -11,11 +17,27 @@ const Footer = () => {
       display="flex"
       justifyContent="space-around"
     >
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/committee">Committee</Link>
-      <Link to="/events">Events</Link>
-      <Link to="/contact">Contact</Link>
+      <ButtonGroup
+        orientation="vertical"
+        aria-label="vertical contained button group"
+        variant="text"
+      >
+        <Button component={Link} to="/" startIcon={<AiFillHome />}>
+          Home
+        </Button>
+        <Button component={Link} to="/about" startIcon={<FcAbout />}>
+          About
+        </Button>
+        <Button component={Link} to="/committee" startIcon={<AiOutlineTeam />}>
+          Committee
+        </Button>
+        <Button component={Link} to="/events" startIcon={<MdEmojiEvents />}>
+          Events
+        </Button>
+        <Button component={Link} to="/contact" startIcon={<IoCall />}>
+          Contact
+        </Button>
+      </ButtonGroup>
     </Box>
   );
 };
