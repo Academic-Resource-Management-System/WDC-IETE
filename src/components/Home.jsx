@@ -26,6 +26,7 @@ function Item(props) {
           style={{ display: "flex", justifyContent: "space-evenly" }}
         >
           <Grid item xs={12} md={8}>
+
             <Typography
               className="fs-2"
               style={{
@@ -34,25 +35,28 @@ function Item(props) {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "start",
-                fontWeight: "900",
                 paddingLeft: "0.5rem",
+                fontWeight: "900",
               }}
             >
-              {props.item.date}
+              {props.item.name}
             </Typography>
+
             <Typography
-              className="fs-4"
+              className="fs-5"
               style={{
                 overflowWrap: "break-word",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "start",
+                fontWeight: "750",
                 paddingLeft: "0.5rem",
               }}
             >
-              {props.item.name}
+              {props.item.date}
             </Typography>
+
             <Typography
               className="fs-5 mt-2"
               style={{
@@ -89,15 +93,30 @@ const Home = () => {
       description:
         "Mr.M.Vigneshwaran (Softskill Trainer/ e-learning developer) gave a guidance session on RESUME building in a Professional manner",
       pic: "http://www.ietechennai.in/assets/img/events/Slide4.jpeg",
-      date: "17th October 2020 (Saturday)",
+      date: "17th October 2023 (Saturday)"
     },
     {
       name: "Professional Resume Writing",
       description:
         "Mr.M.Vigneshwaran (Softskill Trainer/ e-learning developer) gave a guidance session on RESUME building in a Professional manner",
-      pic: "",
-      date: "17th October 2020 (Saturday)",
+      pic: "http://ietechennai.in/assets/img/events/Slide3.jpeg",
+      date: "17/10/2023"
     },
+    {
+      name: "EASE THE ERROR 1.0",
+      description:
+        "24 Hour national level hackathon which challenged students to think out-of-the-box and offer innovative ideas",
+      pic: "http://ietechennai.in/assets/img/events/Slide12.jpeg",
+      date: "10/10/2023 & 11/10/2023"
+    },
+    {
+      name: "5G AND IT’S HISTORYs",
+      description:
+        "Mr.SunderPalaniraj (Director IC-design, TDKInvenSense) gave a technical talk on communication networks",
+      pic: "http://ietechennai.in/assets/img/events/Slide2.jpeg",
+      date: "20/09/2023"
+    }
+
   ];
 
   return (
