@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Paper, Typography, Avatar } from "@mui/material";
+import { Grid, Paper, Typography, Avatar, useTheme } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -10,10 +10,13 @@ import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PhoneIcon from "@mui/icons-material/Phone";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { tokens } from "../theme";
 const Membership = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   return (
     <>
-      <div className="container-fluid bg-dark w-100 py-3 ">
+      <div className="container-fluid  w-100 py-3 ">
         <Typography
           variant="h2"
           style={{
@@ -171,6 +174,7 @@ const Membership = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
@@ -192,6 +196,7 @@ const Membership = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
@@ -213,6 +218,7 @@ const Membership = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
@@ -234,6 +240,7 @@ const Membership = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
@@ -255,6 +262,7 @@ const Membership = () => {
                 width: "100%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar

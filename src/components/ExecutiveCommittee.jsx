@@ -1,5 +1,12 @@
 import React from "react";
-import { Grid, Paper, Typography, Avatar } from "@mui/material";
+import {
+  Grid,
+  Paper,
+  Typography,
+  Avatar,
+  IconButton,
+  useTheme,
+} from "@mui/material";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -10,10 +17,14 @@ import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PhoneIcon from "@mui/icons-material/Phone";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { tokens } from "../theme";
+
 const ExecutiveCommittee = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   return (
     <>
-      <div className="container-fluid bg-dark w-100 py-3 ">
+      <div className="container-fluid  w-100 py-3 ">
         <Typography
           variant="h2"
           style={{
@@ -38,7 +49,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275 }}>
+            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="http://www.ietechennai.in/assets/img/trainers/6.jpg"
@@ -47,21 +58,27 @@ const ExecutiveCommittee = () => {
               <CardContent>
                 <Typography
                   variant="h5"
-                  //     sx={{}}
+                  className="fs-4 d-flex justify-content-center text-align-center"
                 >
                   Dr.N.Venkateswaran
                 </Typography>
-                <Typography variant="h5" sx={{}}>
+                <Typography
+                  style={{ fontWeight: "900" }}
+                  className="fs-5 d-flex justify-content-center text-align-center"
+                >
                   Chairman
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
               </CardContent>
-              <CardActions>
-                <Button size="small"></Button>
-                <Button size="small"></Button>
+              <CardActions className="d-flex justify-content-evenly">
+                <IconButton aria-label="Facebook">
+                  <LinkedInIcon className="fs-3" />
+                </IconButton>
+                <IconButton aria-label="Facebook">
+                  <PhoneIcon className="fs-3" />
+                </IconButton>
+                <IconButton aria-label="Facebook">
+                  <EmailIcon className="fs-3" />
+                </IconButton>
               </CardActions>
             </Card>
           </Grid>
