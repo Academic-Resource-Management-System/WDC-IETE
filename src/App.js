@@ -16,6 +16,8 @@ import TopBar from "./components/TopBar";
 import ExecutiveCommittee from "./components/ExecutiveCommittee";
 import Membership from "./components/Membership";
 import Home from "./components/Home";
+import Footer from './components/Footer';
+
 function App() {
   const [theme, colorMode] = useMode();
   //const colors = tokens(theme.palette.mode);
@@ -52,7 +54,7 @@ function App() {
             boxShadow="0px -1px 5px rgba(0, 0, 0, 0.1)"
             p={2}
           >
-            This is the footer.
+            <Footer />
           </Box>
         </Box>
       </ThemeProvider>
