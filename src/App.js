@@ -1,5 +1,11 @@
-import { CssBaseline, ThemeProvider, Box } from "@mui/material";
-import { IconButton, useTheme, InputBase } from "@mui/material";
+import {
+  CssBaseline,
+  ThemeProvider,
+  Box,
+  colors,
+  useTheme,
+} from "@mui/material";
+import { IconButton, InputBase } from "@mui/material";
 import { useSelector } from "react-redux";
 import {
   BrowserRouter as Router,
@@ -16,11 +22,14 @@ import TopBar from "./components/TopBar";
 import ExecutiveCommittee from "./components/ExecutiveCommittee";
 import Membership from "./components/Membership";
 import Home from "./components/Home";
-import Footer from './components/Footer';
-
+import Footer from "./components/Footer";
+import { tokens } from "./theme";
+import { color } from "@mui/system";
 function App() {
   const [theme, colorMode] = useMode();
-  //const colors = tokens(theme.palette.mode);
+  const themes = useTheme();
+
+  const colors = tokens(themes.palette.mode);
 
   return (
     <Router>
@@ -50,9 +59,8 @@ function App() {
 
           {/* Footer */}
           <Box
-            bgcolor="white"
-            boxShadow="0px -1px 5px rgba(0, 0, 0, 0.1)"
-            p={2}
+
+          //boxShadow="0px -1px 5px rgba(0, 0, 0, 0.1)"
           >
             <Footer />
           </Box>

@@ -84,7 +84,7 @@ function TopBar() {
   };
   console.log(colors.topbar[100]);
   return (
-    <AppBar position="static" style={{ backgroundColor: colors.topbar[100] }}>
+    <AppBar position="static" style={{ backgroundColor: colors.topbar[400] }}>
       <Container className="py-md-3" maxWidth="xl">
         <Toolbar disableGutters>
           <Avatar
