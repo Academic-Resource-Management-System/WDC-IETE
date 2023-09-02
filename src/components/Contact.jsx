@@ -1,5 +1,7 @@
 import React from "react";
 import { Grid, Paper, Typography, Avatar, TextField } from "@mui/material";
+import { AddressMap } from "./Map";
+
 const Contact = () => {
   return (
     <>
@@ -133,7 +135,11 @@ const Contact = () => {
           </Grid>
         </Grid>
       </div>
-      <div className="container mt-4 ">MAP</div>
+      <div className="container mt-4 ">
+
+        <AddressMap/>
+
+      </div>
     </>
   );
 };
