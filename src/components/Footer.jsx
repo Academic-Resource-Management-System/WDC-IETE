@@ -1,22 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Box, Grid, Typography, IconButton, useTheme } from "@mui/material";
-import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
-import { AiFillHome, AiOutlineTeam } from "react-icons/ai";
-import { FcAbout } from "react-icons/fc";
-import { MdEmojiEvents } from "react-icons/md";
-import { IoCall } from "react-icons/io5";
+import {
+  Grid,
+  Typography,
+  IconButton,
+  useTheme,
+  TextField,
+  Button,
+} from "@mui/material";
 import { Nav } from "react-bootstrap";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import PhoneIcon from "@mui/icons-material/Phone";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import { tokens } from "../theme";
-import { color } from "@mui/system";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { tokens } from "../theme";
+
 const Footer = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -38,14 +38,14 @@ const Footer = () => {
             <Typography className="fs-3 text-start font-weight-bold">
               IETE Chennai
             </Typography>
-            <Typography className="fs-5 py-2  font-weight-bold text-start">
+            <Typography className="fs-5 py-2 font-weight-bold text-start">
               IETE Chennai centre, No: 37, Conran Smith Road Entrance Peters
-              Road, Gopalapuram,Chennai, Tamil Nadu 600086
+              Road, Gopalapuram, Chennai, Tamil Nadu 600086
             </Typography>
             <Typography className="fs-5 py-2 font-weight-bold text-start">
               Phone: 044 2835 0773
             </Typography>
-            <Typography className="fs-5 py-2 font-weight-bold  text-start">
+            <Typography className="fs-5 py-2 font-weight-bold text-start">
               Email: ietechennai@gmail.com
             </Typography>
           </Grid>
@@ -165,29 +165,72 @@ const Footer = () => {
 
           <Grid item xs={12} md={4}>
             <div>
-              {/* <div>
-                <Typography className="fs-3 text-start">
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-end",
+                }}
+              >
+                <Typography className="fs-3 text-end">
                   Join Our Newsletter
-                </Typography> 
-    </div>*/}
-              <div>
+                </Typography>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    marginTop: "10px",
+                  }}
+                >
+                  <TextField
+                    label="Email Address"
+                    variant="outlined"
+                    size="small"
+                    InputProps={{
+                      style: {
+                        borderRadius: "20px",
+                      },
+                    }}
+                    InputLabelProps={{
+                      style: {
+                        fontWeight: "bold",
+                      },
+                    }}
+                  />
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    style={{
+                      marginTop: "10px",
+                      borderRadius: "20px",
+                      fontWeight: "bold",
+                      textTransform: "none",
+                      color: "white",
+                    }}
+                  >
+                    Subscribe
+                  </Button>
+                </div>
+              </div>
+              <div style={{ marginTop: "20px" }}>
                 <Typography className="fs-3 text-center">
                   Social Media Links
                 </Typography>
                 <div className="d-flex justify-content-center">
-                  <IconButton aria-label="Facebook">
+                  <IconButton aria-label="LinkedIn">
                     <LinkedInIcon className="fs-1 text-primary" />
                   </IconButton>
-                  <IconButton aria-label="Facebook ">
+                  <IconButton aria-label="Facebook">
                     <FacebookIcon className="fs-1 text-primary" />
                   </IconButton>
-                  <IconButton aria-label="Facebook">
+                  <IconButton aria-label="Instagram">
                     <InstagramIcon className="fs-1 text-info" />
                   </IconButton>
-                  <IconButton aria-label="Facebook">
+                  <IconButton aria-label="YouTube">
                     <YouTubeIcon className="fs-1 text-danger" color="red" />
                   </IconButton>{" "}
-                  <IconButton aria-label="Facebook">
+                  <IconButton aria-label="Twitter">
                     <TwitterIcon className="fs-1 text-primary" color="red" />
                   </IconButton>
                 </div>
