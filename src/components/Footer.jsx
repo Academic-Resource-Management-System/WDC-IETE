@@ -109,7 +109,7 @@ const Footer = () => {
               </Nav.Item>
             </Nav>
 
-            <Nav className="flex-column">
+           <center> <Nav className="flex-column">
               <Nav.Item>
                 <Typography
                   className="fs-5 px-3"
@@ -117,50 +117,55 @@ const Footer = () => {
                 >
                   Courses Offered
                 </Typography>
-                <Nav.Link as={Link} to="/">
+                <Nav.Link as={Link} to="/cat">
                   <Typography
                     className="fs-6"
                     style={{ color: colors.topbar[200] }}
                   >
-                    Home
+                    Course 1
                   </Typography>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/about">
+                <Nav.Link as={Link} to="/cat">
                   <Typography
                     className="fs-6"
                     style={{ color: colors.topbar[200] }}
                   >
-                    About
+                    Course 2
                   </Typography>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/committee">
+                <Nav.Link as={Link} to="/cat">
                   <Typography
                     className="fs-6"
                     style={{ color: colors.topbar[200] }}
                   >
-                    Committee
+                    Course 3
                   </Typography>{" "}
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/events">
-                  <Typography style={{ color: colors.topbar[200] }}>
-                    Events
+                <Nav.Link as={Link} to="/cat">
+                  
+                  <Typography className="fs-6"
+                   style={{ color: colors.topbar[200] }}
+                   >
+                  Course 4
                   </Typography>{" "}
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/contact">
-                  <Typography style={{ color: colors.topbar[200] }}>
-                    Contact
+                <Nav.Link as={Link} to="/cat">
+                  <Typography className="fs-6" 
+                  style={{ color: colors.topbar[200] }}
+                  >
+                    Course 5
                   </Typography>{" "}
                 </Nav.Link>
               </Nav.Item>
-            </Nav>
+            </Nav> </center>
           </Grid>
 
           <Grid item xs={12} md={4}>
