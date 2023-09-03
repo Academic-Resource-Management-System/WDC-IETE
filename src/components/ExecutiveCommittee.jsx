@@ -55,6 +55,7 @@ const ExecutiveCommittee = () => {
                 image="http://www.ietechennai.in/assets/img/trainers/6.jpg"
                 title="green iguana"
               />
+
               <CardContent>
                 <Typography
                   variant="h5"
@@ -80,7 +81,7 @@ const ExecutiveCommittee = () => {
                   <EmailIcon className="fs-3" />
                 </IconButton>
               </CardActions>
-            </Card>
+            </Card>{" "}
           </Grid>
         </Grid>
       </div>

@@ -1,7 +1,7 @@
 import { loadModeState } from "./dataStorage";
 
 const initialState = loadModeState() || {
-  currentMode: "light",
+  currentMode: "dark",
 };
 
 const themeReducer = (state = initialState, action) => {

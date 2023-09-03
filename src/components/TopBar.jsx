@@ -29,6 +29,7 @@ import img from "../android-chrome-192x192.png";
 import img1 from "../DD2.png";
 import { Link } from "react-router-dom";
 import { tokens } from "../theme";
+import { Nav, NavDropdown } from "react-bootstrap";
 
 const pages = [
   "Home",
@@ -36,8 +37,8 @@ const pages = [
   "Events",
   "Executive Committee",
   "Membership",
-  "chencon",
-  "Chenlink News Letter",
+  "chencon:a1",
+  "Chenlink News Letter:a2",
   "Contact",
 ];
 const pagesLink = [
@@ -99,16 +100,16 @@ function TopBar() {
           />
           <Typography
             variant="h6"
-            component="a"
-            href="/"
+            component="p"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
-              fontWeight: 700,
+              fontWeight: 900,
               //  letterSpacing: ".1rem",
+
               color: colors.topbar[200],
-              width: "200px",
+              minWidth: "250px",
               textDecoration: "none",
               flex: 1,
               overflowWrap: "break-word",
@@ -122,7 +123,7 @@ function TopBar() {
               size="large"
               aria-label="open drawer"
               onClick={toggleDrawer(true)}
-              color="inherit"
+              color={colors.topbar[200]}
             >
               <MenuIcon />
             </IconButton>
@@ -177,17 +178,64 @@ function TopBar() {
               justifyContent: "space-evenly",
             }}
           >
-            {pages.map((page, i) => (
-              <Link to={`${pagesLink[i]}`}>
-                <Button
-                  key={page}
-                  //   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, display: "block" }}
-                >
-                  <Typography>{page}</Typography>
-                </Button>
-              </Link>
-            ))}
+            <Nav className="flex-row">
+              {pages.map((page, i) => (
+                <React.Fragment key={page}>
+                  {page.includes(":") ? (
+                    <NavDropdown
+                      title={
+                        <span
+                          className="fs-6"
+                          style={{
+                            color: colors.topbar[200],
+                          }}
+                        >
+                          {page.split(":")[0]}
+                        </span>
+                      }
+                      id={`dropdown-${i}`}
+                    >
+                      {page.split(":")[1] === "a1" ? (
+                        <>
+                          <NavDropdown.Item href="#">
+                            Dropdown Item 1
+                          </NavDropdown.Item>
+                          <NavDropdown.Item href="#">
+                            Dropdown Item 2
+                          </NavDropdown.Item>
+                        </>
+                      ) : (
+                        <>
+                          <NavDropdown.Item href="#">
+                            Dropdown Item 3
+                          </NavDropdown.Item>
+                          <NavDropdown.Item href="#">
+                            Dropdown Item 4
+                          </NavDropdown.Item>
+                        </>
+                      )}
+                    </NavDropdown>
+                  ) : (
+                    <Nav.Item
+                      key={page}
+                      //   onClick={handleCloseNavMenu}
+                      sx={{ my: 2, display: "block" }}
+                    >
+                      <Nav.Link as={Link} to={`${pagesLink[i]}`}>
+                        <Typography
+                          className="fs-6"
+                          style={{
+                            color: colors.topbar[200],
+                          }}
+                        >
+                          {page}
+                        </Typography>
+                      </Nav.Link>
+                    </Nav.Item>
+                  )}
+                </React.Fragment>
+              ))}
+            </Nav>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

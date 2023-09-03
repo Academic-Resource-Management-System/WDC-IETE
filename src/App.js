@@ -25,6 +25,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import { tokens } from "./theme";
 import { color } from "@mui/system";
+
 function App() {
   const [theme, colorMode] = useMode();
   const themes = useTheme();
@@ -47,7 +48,7 @@ function App() {
             <TopBar />
           </Box>
 
-          <Box display="flex" flexDirection="column" flexGrow={1} py={2}>
+          <Box display="flex" flexDirection="column" flexGrow={1}>
             <Routes>
               <Route path="/about" element={<AboutUs />} />
               <Route path="/committee" element={<ExecutiveCommittee />} />

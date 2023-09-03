@@ -1,8 +1,16 @@
 import React from "react";
-import { Grid, Paper, Typography, Avatar, useTheme } from "@mui/material";
+import {
+  Grid,
+  Paper,
+  Typography,
+  Avatar,
+  useTheme,
+  CardMedia,
+} from "@mui/material";
 import { tokens } from "../theme";
-import Carousel from 'react-bootstrap/Carousel';
-
+import Carousel from "react-bootstrap/Carousel";
+import AnimatedNumber from "./AnimatedNumber";
+import VerifiedIcon from "@mui/icons-material/Verified";
 const AboutUs = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -10,18 +18,19 @@ const AboutUs = () => {
   const carouselItems = [
     {
       title: "College",
-      imgSrc: "https://i0.wp.com/www.ietechandigarh.org/Slider/images/slides/new1.jpg", // Replace with your image URL
+      imgSrc:
+        "https://i0.wp.com/www.ietechandigarh.org/Slider/images/slides/new1.jpg", // Replace with your image URL
     },
     {
       title: "ISF inauguration meeting",
-      imgSrc: "https://scontent-maa2-2.xx.fbcdn.net/v/t1.6435-9/37014512_409961682843011_3974733593812402176_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VLtwclb7kT8AX8GfABX&_nc_ht=scontent-maa2-2.xx&oh=00_AfCthCbihC1RSQ8AjHwu-EYFr2y47AB0RIRV4Du-LPjAjQ&oe=6519291A", // Replace with your image URL
+      imgSrc:
+        "https://scontent-maa2-2.xx.fbcdn.net/v/t1.6435-9/37014512_409961682843011_3974733593812402176_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VLtwclb7kT8AX8GfABX&_nc_ht=scontent-maa2-2.xx&oh=00_AfCthCbihC1RSQ8AjHwu-EYFr2y47AB0RIRV4Du-LPjAjQ&oe=6519291A", // Replace with your image URL
     },
     // Add more items as needed
   ];
 
   return (
     <>
-    
       <div className="container-fluid  w-100 py-3 ">
         <Typography
           variant="h2"
@@ -81,24 +90,31 @@ const AboutUs = () => {
           </Grid>
 
           <Grid item xs={12} md={6}>
-
-          <Carousel>
-  {carouselItems.map((item, index) => (
-    <Carousel.Item key={index}>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <div style={{ textAlign: 'center', marginTop: '10px' }}>
-          <h3>{item.title}</h3>
-        </div>
-        <img
-          className="d-block w-100"
-          src={item.imgSrc}
-          alt={item.title}
-        />
-      </div>
-    </Carousel.Item>
-  ))}
-</Carousel>
-
+            <Carousel className="h-100 pt-4">
+              {carouselItems.map((item, index) => (
+                <Carousel.Item key={index} className="h-100">
+                  <div
+                    className="h-100"
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div style={{ textAlign: "center", marginTop: "10px" }}>
+                      <h3>{item.title}</h3>
+                    </div>
+                    <CardMedia
+                      component="img"
+                      height={300}
+                      image={item.imgSrc} // Provide the image URL here
+                      alt={item.title}
+                      style={{ objectFit: "cover" }} // Add this line
+                    />
+                  </div>
+                </Carousel.Item>
+              ))}
+            </Carousel>
           </Grid>
 
           <Grid
@@ -153,6 +169,7 @@ const AboutUs = () => {
               className="mt-2"
               style={{ overflowWrap: "break-word", textAlign: "justify" }}
             >
+              <VerifiedIcon className="text-success me-1" />
               Vision: Reaching the un-reached and empowering the youth through
               Technical Education and Skill Development.
             </Typography>
@@ -161,6 +178,7 @@ const AboutUs = () => {
               className="mt-1"
               style={{ overflowWrap: "break-word", textAlign: "justify" }}
             >
+              <VerifiedIcon className="text-success me-1" />
               Mission: Advancement of Electronics, Telecommunication,
               Information Technology & other related disciplines to contribute
               in Nation’s Human Resource & Infrastructure Development through
@@ -171,6 +189,7 @@ const AboutUs = () => {
               className="mt-2"
               style={{ overflowWrap: "break-word", textAlign: "justify" }}
             >
+              <VerifiedIcon className="text-success me-1" />
               Motives: IETE is helping it's students to learn and grow in the
               emerging field of Electronics and Telecommunication. One of the
               missions of IETE is to provide the best mode of studying a Btech
@@ -200,7 +219,7 @@ const AboutUs = () => {
             }}
           >
             <Typography variant="h2" style={{ overflowWrap: "break-word" }}>
-              12060
+              <AnimatedNumber targetNumber={12060} duration={6000} />
             </Typography>
             <Typography variant="h3" style={{ overflowWrap: "break-word" }}>
               Students
@@ -221,7 +240,7 @@ const AboutUs = () => {
             }}
           >
             <Typography variant="h2" style={{ overflowWrap: "break-word" }}>
-              13592
+              <AnimatedNumber targetNumber={13592} duration={5000} />
             </Typography>
             <Typography variant="h3" style={{ overflowWrap: "break-word" }}>
               Staff
@@ -242,7 +261,7 @@ const AboutUs = () => {
             }}
           >
             <Typography variant="h2" style={{ overflowWrap: "break-word" }}>
-              42
+              <AnimatedNumber targetNumber={42} duration={3000} />
             </Typography>
             <Typography variant="h3" style={{ overflowWrap: "break-word" }}>
               Events
@@ -263,7 +282,7 @@ const AboutUs = () => {
             }}
           >
             <Typography variant="h2" style={{ overflowWrap: "break-word" }}>
-              15
+              <AnimatedNumber targetNumber={15} duration={3000} />
             </Typography>
             <Typography variant="h3" style={{ overflowWrap: "break-word" }}>
               Colleges
@@ -271,7 +290,7 @@ const AboutUs = () => {
           </Grid>
         </Grid>
       </div>
-      <div className="container">
+      <div className="container mb-5 pb-5">
         <Grid container spacing={2}>
           <Grid item xs={12} md={12}>
             <Typography
