@@ -51,6 +51,25 @@ const pagesLink = [
   "Chenlink",
   "contact",
 ];
+
+const mpages = [
+  "Home",
+  "About",
+  "Events",
+  "Executive Committee",
+  "Membership",
+  "Contact",
+];
+
+const mpagesLink = [
+  "/",
+  "about",
+  "events",
+  "committee",
+  "membership",
+  "contact",
+];
+
 function TopBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const dispatch = useDispatch();
@@ -132,18 +151,36 @@ function TopBar() {
               anchor="left"
               open={isDrawerOpen}
               onClose={toggleDrawer(false)}
+              //    style={{ backgroundColor: colors.topbar[300] }}
             >
               <div
                 role="presentation"
                 onClick={toggleDrawer(false)}
                 onKeyDown={toggleDrawer(false)}
+                className="h-100"
+                style={{ backgroundColor: colors.topbar[300] }}
               >
+                <Typography className="fs-4 text-center py-4">IETE</Typography>
                 <List>
-                  {pages.map((page, i) => (
-                    <Link to={`${pagesLink[i]}`}>
+                  {mpages.map((page, i) => (
+                    <Link
+                      to={`${mpagesLink[i]}`}
+                      style={{
+                        color: colors.topbar[200],
+                        textDecoration: "none",
+                      }}
+                    >
                       <ListItem button key={page}>
                         <ListItemText>
-                          <Typography>{page}</Typography>
+                          <Typography
+                            className="fs-4"
+                            style={{
+                              color: colors.topbar[200],
+                              textDecoration: "none",
+                            }}
+                          >
+                            {page}
+                          </Typography>
                         </ListItemText>
                       </ListItem>
                     </Link>

@@ -153,11 +153,11 @@ const Home = () => {
           <Grid item xs={12} md={6}>
             <div className="d-flex flex-column h-100 justify-content-center mx-md-5">
               <Paper
-                className="px-2 py-3 "
+                className="px-2 py-3 w-100"
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  width: "500px",
+
                   background: "transparent", // Set your desired background color with some transparency
                   backdropFilter: "blur(100px)",
                   border: "1pt solid black",

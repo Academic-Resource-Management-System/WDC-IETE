@@ -2,6 +2,7 @@ import {
   CssBaseline,
   ThemeProvider,
   Box,
+  Typography,
   colors,
   useTheme,
 } from "@mui/material";
@@ -26,19 +27,23 @@ import Footer from "./components/Footer";
 import { tokens } from "./theme";
 import { color } from "@mui/system";
 import Event from "./components/Event";
+import TopRightIcon from "./components/TopRightIcon";
+import PlayCircleFilledRoundedIcon from "@mui/icons-material/PlayCircleFilledRounded";
+
 function App() {
   const [theme, colorMode] = useMode();
-  const themes = useTheme();
 
-  const colors = tokens(themes.palette.mode);
-
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // You can use 'smooth' for a smooth scroll effect
+  };
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <ToastContainer />
+
         <Box display="flex" flexDirection="column" minHeight="100vh">
-          {/* Header */}
+          {/* Header */}{" "}
           <Box
             position="sticky"
             top={0}
@@ -47,7 +52,6 @@ function App() {
           >
             <TopBar />
           </Box>
-
           <Box display="flex" flexDirection="column" flexGrow={1} py={2}>
             <Routes>
               <Route path="/about" element={<AboutUs />} />
@@ -56,9 +60,29 @@ function App() {
               <Route path="/membership" element={<Membership />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<Home />} />
-            </Routes>
-          </Box>
+            </Routes>{" "}
+            <Typography
+              component="p"
+              style={{
+                position: "fixed",
+                bottom: "30px",
+                right: "30px",
+                zIndex: 1000,
+              }}
+              onClick={scrollToTop}
+            >
+              <PlayCircleFilledRoundedIcon
+                //  className="text-primary"
+                color={theme === "dark" ? "red" : "green"}
+                style={{
+                  fontSize: "60px",
+                  //  backgroundColor: "transparent",
 
+                  transform: "rotate(270deg)",
+                }}
+              />
+            </Typography>
+          </Box>
           {/* Footer */}
           <Box
 
