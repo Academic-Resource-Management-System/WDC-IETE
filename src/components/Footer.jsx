@@ -31,7 +31,7 @@ const Footer = () => {
         <Grid
           container
           spacing={2}
-          className="my-2 "
+          className="mt-2 "
           style={{ display: "flex", justifyContent: "space-evenly" }}
         >
           <Grid item xs={12} md={4}>
@@ -109,82 +109,80 @@ const Footer = () => {
               </Nav.Item>
             </Nav>
 
-           <center> <Nav className="flex-column">
-              <Nav.Item>
-                <Typography
-                  className="fs-5 px-3"
-                  style={{ color: colors.topbar[200] }}
-                >
-                  Courses Offered
-                </Typography>
-                <Nav.Link as={Link} to="/cat">
+            <center>
+              {" "}
+              <Nav className="flex-column">
+                <Nav.Item>
                   <Typography
-                    className="fs-6"
+                    className="fs-5 px-3"
                     style={{ color: colors.topbar[200] }}
                   >
-                    Course 1
+                    Courses Offered
                   </Typography>
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/cat">
-                  <Typography
-                    className="fs-6"
-                    style={{ color: colors.topbar[200] }}
-                  >
-                    Course 2
-                  </Typography>
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/cat">
-                  <Typography
-                    className="fs-6"
-                    style={{ color: colors.topbar[200] }}
-                  >
-                    Course 3
-                  </Typography>{" "}
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/cat">
-                  
-                  <Typography className="fs-6"
-                   style={{ color: colors.topbar[200] }}
-                   >
-                  Course 4
-                  </Typography>{" "}
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/cat">
-                  <Typography className="fs-6" 
-                  style={{ color: colors.topbar[200] }}
-                  >
-                    Course 5
-                  </Typography>{" "}
-                </Nav.Link>
-              </Nav.Item>
-            </Nav> </center>
+                  <Nav.Link as={Link} to="/cat">
+                    <Typography
+                      className="fs-6"
+                      style={{ color: colors.topbar[200] }}
+                    >
+                      Course 1
+                    </Typography>
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/cat">
+                    <Typography
+                      className="fs-6"
+                      style={{ color: colors.topbar[200] }}
+                    >
+                      Course 2
+                    </Typography>
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/cat">
+                    <Typography
+                      className="fs-6"
+                      style={{ color: colors.topbar[200] }}
+                    >
+                      Course 3
+                    </Typography>{" "}
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/cat">
+                    <Typography
+                      className="fs-6"
+                      style={{ color: colors.topbar[200] }}
+                    >
+                      Course 4
+                    </Typography>{" "}
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} to="/cat">
+                    <Typography
+                      className="fs-6"
+                      style={{ color: colors.topbar[200] }}
+                    >
+                      Course 5
+                    </Typography>{" "}
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>{" "}
+            </center>
           </Grid>
 
           <Grid item xs={12} md={4}>
             <div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-end",
-                }}
-              >
-                <Typography className="fs-3 text-end">
+              <div className="mt-1">
+                <Typography className="fs-3 text-center">
                   Join Our Newsletter
                 </Typography>
                 <div
                   style={{
                     display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
+                    flexDirection: "row",
+                    justifyContent: "center",
                     marginTop: "10px",
                   }}
                 >
@@ -206,8 +204,8 @@ const Footer = () => {
                   <Button
                     variant="contained"
                     color="primary"
+                    className="ms-2 bg-primary"
                     style={{
-                      marginTop: "10px",
                       borderRadius: "20px",
                       fontWeight: "bold",
                       textTransform: "none",
@@ -219,7 +217,7 @@ const Footer = () => {
                 </div>
               </div>
               <div style={{ marginTop: "20px" }}>
-                <Typography className="fs-3 text-center">
+                <Typography className="fs-3 text-center mt-5">
                   Social Media Links
                 </Typography>
                 <div className="d-flex justify-content-center">

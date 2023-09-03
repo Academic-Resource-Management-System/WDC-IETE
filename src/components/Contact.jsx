@@ -1,11 +1,21 @@
 import React from "react";
-import { Grid, Paper, Typography, Avatar, TextField } from "@mui/material";
+import {
+  Grid,
+  Paper,
+  Typography,
+  Avatar,
+  TextField,
+  useTheme,
+} from "@mui/material";
 import { AddressMap } from "./Map";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
-
+import { tokens } from "../theme";
 const Contact = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   return (
     <>
       <div className="container-fluid  w-100 py-3 ">
@@ -39,25 +49,33 @@ const Contact = () => {
                 width: "75%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
                 alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
                 sx={{ width: 56, height: 56 }}
-              />
-              <div className="ps-3 py-2">
-                <ImLocation /> {/* Use ImLocation icon */}
-              <Typography
-                variant="h5"
-                className="ps-3 py-2"
-                style={{ flex: 1, overflowWrap: "break-word" }}
+                style={{
+                  backgroundColor: "transparent",
+                  color: colors.topbar[300],
+                }}
               >
-                Location: IETE Chennai centre, No: 37, Conran Smith Road
-                Entrance Peters Road, Gopalapuram,Chennai, Tamil Nadu 600086
-              </Typography>
+                <ImLocation
+                  className="fs-1"
+                  style={{ color: colors.topbar[200] }}
+                />
+              </Avatar>
+              <div className="ps-3 py-2">
+                {/* Use ImLocation icon */}
+                <Typography
+                  variant="h5"
+                  className="ps-3 py-2"
+                  style={{ flex: 1, overflowWrap: "break-word" }}
+                >
+                  Location: IETE Chennai centre, No: 37, Conran Smith Road
+                  Entrance Peters Road, Gopalapuram,Chennai, Tamil Nadu 600086
+                </Typography>
               </div>
-
             </Paper>
             <Paper
               className="px-2 py-3 my-2"
@@ -65,24 +83,31 @@ const Contact = () => {
                 width: "75%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
                 alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
                 sx={{ width: 56, height: 56 }}
-              />
-              <div className="ps-3 py-2">
-                <MdEmail /> {/* Use MdEmail icon */}
-              <Typography
-                variant="h5"
-                className="ps-3 py-2"
-                style={{ flex: 1, overflowWrap: "break-word" }}
+                style={{
+                  backgroundColor: "transparent",
+                  color: colors.topbar[300],
+                }}
               >
-                Email: ietechennai@gmail.com
-              </Typography>
+                <MdEmail
+                  className="fs-1"
+                  style={{ color: colors.topbar[200] }}
+                />
+              </Avatar>
+              <div className="ps-3 py-2">
+                <Typography
+                  variant="h5"
+                  className="ps-3 py-2"
+                  style={{ flex: 1, overflowWrap: "break-word" }}
+                >
+                  Email: ietechennai@gmail.com
+                </Typography>
               </div>
-
             </Paper>
             <Paper
               className="px-2 py-3 my-2"
@@ -90,22 +115,30 @@ const Contact = () => {
                 width: "75%",
                 display: "flex",
                 alignItems: "center", // Center vertically
+                backgroundColor: colors.topbar[300],
               }}
             >
               <Avatar
                 alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
                 sx={{ width: 56, height: 56 }}
-              />
-              <div className="ps-3 py-2">
-                <BiSolidPhoneCall /> {/* Use BiSolidPhoneCall icon */}
-              <Typography
-                variant="h5"
-                className="ps-3 py-2"
-                style={{ flex: 1, overflowWrap: "break-word" }}
+                style={{
+                  backgroundColor: "transparent",
+                  color: colors.topbar[300],
+                }}
               >
-                Call: 044 2835 0773
-              </Typography>
+                <BiSolidPhoneCall
+                  className="fs-1"
+                  style={{ color: colors.topbar[200] }}
+                />
+              </Avatar>
+              <div className="ps-3 py-2">
+                <Typography
+                  variant="h5"
+                  className="ps-3 py-2"
+                  style={{ flex: 1, overflowWrap: "break-word" }}
+                >
+                  Call: 044 2835 0773
+                </Typography>
               </div>
             </Paper>
           </Grid>
@@ -150,9 +183,7 @@ const Contact = () => {
         </Grid>
       </div>
       <div className="container mt-4 ">
-
-        <AddressMap/>
-
+        <AddressMap />
       </div>
     </>
   );

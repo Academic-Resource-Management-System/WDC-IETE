@@ -49,7 +49,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="http://www.ietechennai.in/assets/img/trainers/6.jpg"
@@ -69,13 +69,6 @@ const ExecutiveCommittee = () => {
                 >
                   Chairman
                 </Typography>
-                <Typography
-                  style={{ fontSize: '14px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  venkateswaran.iete@gmail.com
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -97,7 +90,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="http://ietechennai.in/assets/img/trainers/tata_sudhakar.jpeg"
@@ -116,14 +109,6 @@ const ExecutiveCommittee = () => {
                 >
                   Immd Post Chairman
                 </Typography>
-
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  tatasudhakar@gmail.com
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -145,7 +130,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?w=740&t=st=1693661191~exp=1693661791~hmac=107e29640a15817f9124452289d6bb0478bcb85edd10bbc3c786c42f287b7f19"
@@ -164,13 +149,6 @@ const ExecutiveCommittee = () => {
                 >
                   Honorary Secratary
                 </Typography>
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  shakthimuruganece@gmail.com
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -192,9 +170,9 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
-                sx={{ height: 250 }}
+                sx={{ height: 250, width: "100%" }}
                 image="http://ietechennai.in/assets/img/trainers/4.jpg"
                 title="green iguana"
               />
@@ -211,13 +189,6 @@ const ExecutiveCommittee = () => {
                 >
                   Honorary Treasurer
                 </Typography>
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  jprabha@svce.ac.in
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -239,7 +210,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?w=740&t=st=1693661191~exp=1693661791~hmac=107e29640a15817f9124452289d6bb0478bcb85edd10bbc3c786c42f287b7f19"
@@ -258,13 +229,6 @@ const ExecutiveCommittee = () => {
                 >
                   EC Member
                 </Typography>
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  cukumar@gmail.com
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -286,7 +250,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?w=740&t=st=1693661191~exp=1693661791~hmac=107e29640a15817f9124452289d6bb0478bcb85edd10bbc3c786c42f287b7f19"
@@ -305,13 +269,6 @@ const ExecutiveCommittee = () => {
                 >
                   EC Member
                 </Typography>
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  thulasi9840@gmail.com
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -333,7 +290,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="http://ietechennai.in/assets/img/trainers/5.jpg"
@@ -352,13 +309,6 @@ const ExecutiveCommittee = () => {
                 >
                   EC Member
                 </Typography>
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  dvijendrababu@gmail.com
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -380,7 +330,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?w=740&t=st=1693661191~exp=1693661791~hmac=107e29640a15817f9124452289d6bb0478bcb85edd10bbc3c786c42f287b7f19"
@@ -399,13 +349,6 @@ const ExecutiveCommittee = () => {
                 >
                   EC Member
                 </Typography>
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  lovechennai@yahoo.com
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -427,7 +370,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="http://ietechennai.in/assets/img/trainers/arunkumar.jpeg"
@@ -446,13 +389,6 @@ const ExecutiveCommittee = () => {
                 >
                   EC Member
                 </Typography>
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  arunsundar.s@cvrde.drdo.in
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -474,7 +410,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?w=740&t=st=1693661191~exp=1693661791~hmac=107e29640a15817f9124452289d6bb0478bcb85edd10bbc3c786c42f287b7f19"
@@ -493,12 +429,6 @@ const ExecutiveCommittee = () => {
                 >
                   EC Member
                 </Typography>
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  madivaanan.s@gmail.com
-                </Typography>
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -520,7 +450,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="http://ietechennai.in/assets/img/trainers/dr_vaishali.jpg"
@@ -539,14 +469,6 @@ const ExecutiveCommittee = () => {
                 >
                   Co-opted Member
                 </Typography>
-
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  vaishali.b@vdp.srmuniv.ac.in
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -568,7 +490,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="http://ietechennai.in/assets/img/trainers/arun.jpeg"
@@ -587,13 +509,6 @@ const ExecutiveCommittee = () => {
                 >
                   Co-opted Member
                 </Typography>
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  snatarajan1967@gmail.com
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -615,7 +530,7 @@ const ExecutiveCommittee = () => {
             md={4}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card sx={{ maxWidth: 275, backgroundColor: colors.topbar[300] }}>
+            <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
               <CardMedia
                 sx={{ height: 250 }}
                 image="http://ietechennai.in/assets/img/trainers/sumathi.jpeg"
@@ -634,13 +549,6 @@ const ExecutiveCommittee = () => {
                 >
                   Co-opted Member
                 </Typography>
-                <Typography
-                  style={{ fontSize: '13px' }} // Adjust the size as needed
-                  align="center"
-                >
-                  sumathi.ece@sairam.edu.in
-                </Typography>
-
               </CardContent>
               <CardActions className="d-flex justify-content-evenly">
                 <IconButton aria-label="Facebook">
@@ -655,7 +563,6 @@ const ExecutiveCommittee = () => {
               </CardActions>
             </Card>
           </Grid>
-
         </Grid>
       </div>
     </>

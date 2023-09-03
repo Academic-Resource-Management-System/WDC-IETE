@@ -105,18 +105,48 @@ const Membership = () => {
             sm={3}
             className="d-flex w-100 flex-column align-items-center justify-content-center"
           >
-            <Card className="w-100 h-100">
+            <Card className="w-100 h-100 bg-transparent py-3">
               <CardContent>
-                <Typography
-                  variant="h5"
-                  //     sx={{}}
-                >
+                <Typography className="fs-4 text-center">
                   Corporate Members
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Button size="small"></Button>
-                <Button size="small"></Button>
+              <CardActions className="d-flex flex-column align-items-start">
+                <Typography className="fs-5 text-start  ps-4"></Typography>
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  1. Honorary fellow (HF) (elected)
+                </Typography>{" "}
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  2. Distinguished Fellow (DF) (elected)
+                </Typography>
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  3. Fellow (F)
+                </Typography>
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  4. Member (M)
+                </Typography>
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  5. Associate member (AM)
+                </Typography>
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  Click Check button to learn more about the Eligibility
+                  Criteria and other details
+                </Typography>
+                <div className="  d-flex justify-content-end align-items-end pe-4 w-100 ">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className="bg-primary"
+                    style={{
+                      borderRadius: "20px",
+                      fontWeight: "bold",
+                      textTransform: "none",
+                      color: "white",
+                    }}
+                  >
+                    check
+                  </Button>
+                </div>
               </CardActions>
             </Card>
           </Grid>
@@ -128,20 +158,48 @@ const Membership = () => {
             sm={3}
             className="d-flex flex-column align-items-center justify-content-center"
           >
-            <Card className="w-100 h-100">
+            <Card className="w-100 h-100 bg-transparent py-3">
               <CardContent>
-                <Typography variant="h3">Non-Corporate Members:</Typography>
-                <Typography variant="h5" sx={{}}>
-                  Chairman
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                <Typography className="fs-4 text-center">
+                  Non-Corporate Members
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Button size="small"></Button>
-                <Button size="small"></Button>
+              <CardActions className="d-flex flex-column align-items-start">
+                <Typography className="fs-5 text-start  ps-4"></Typography>
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  6. Associate (A)
+                </Typography>{" "}
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  7. Organisational Member (ORG)
+                </Typography>
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  8. AMIETE Student (AMIETE)
+                </Typography>
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  9. DIPIETE Student (DipIETE)
+                </Typography>
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  10. Diploma Member (DipIETE Passout)
+                </Typography>
+                <Typography className="fs-5 my-3 text-start ps-4">
+                  Click Check button to learn more about the Eligibility
+                  Criteria and other details
+                </Typography>
+                <div className="  d-flex justify-content-end align-items-end pe-4 w-100 ">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className="bg-primary"
+                    style={{
+                      borderRadius: "20px",
+                      fontWeight: "bold",
+                      textTransform: "none",
+                      color: "white",
+                    }}
+                  >
+                    check
+                  </Button>
+                </div>
               </CardActions>
             </Card>
           </Grid>
@@ -177,11 +235,7 @@ const Membership = () => {
                 backgroundColor: colors.topbar[300],
               }}
             >
-              <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
-                sx={{ width: 56, height: 56 }}
-              />
+              <Avatar sx={{ width: 56, height: 56 }} />
               <Typography
                 variant="h5"
                 className="ps-3 py-2"
@@ -199,11 +253,7 @@ const Membership = () => {
                 backgroundColor: colors.topbar[300],
               }}
             >
-              <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
-                sx={{ width: 56, height: 56 }}
-              />
+              <Avatar sx={{ width: 56, height: 56 }} />
               <Typography
                 variant="h5"
                 className="ps-3 py-2"
@@ -221,11 +271,7 @@ const Membership = () => {
                 backgroundColor: colors.topbar[300],
               }}
             >
-              <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
-                sx={{ width: 56, height: 56 }}
-              />
+              <Avatar sx={{ width: 56, height: 56 }} />
               <Typography
                 variant="h5"
                 className="ps-3 py-2"
@@ -243,11 +289,7 @@ const Membership = () => {
                 backgroundColor: colors.topbar[300],
               }}
             >
-              <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
-                sx={{ width: 56, height: 56 }}
-              />
+              <Avatar sx={{ width: 56, height: 56 }} />
               <Typography
                 variant="h5"
                 className="ps-3 py-2"
@@ -265,11 +307,7 @@ const Membership = () => {
                 backgroundColor: colors.topbar[300],
               }}
             >
-              <Avatar
-                alt="Remy Sharp"
-                src="/static/images/avatar/1.jpg"
-                sx={{ width: 56, height: 56 }}
-              />
+              <Avatar sx={{ width: 56, height: 56 }} />
               <Typography
                 variant="h5"
                 className="ps-3 py-2"

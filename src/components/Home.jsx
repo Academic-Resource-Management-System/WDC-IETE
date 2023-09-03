@@ -163,19 +163,19 @@ const Home = () => {
                   border: "1pt solid black",
                 }}
               >
-                <div className="d-flex flex-column justify-content-center align-items-center">
+                <div className="d-flex mx-3 flex-column justify-content-center align-items-center">
                   <Typography className="fs-4 text-light">13</Typography>
                   <Typography className="fs-4 text-light">MAY</Typography>
                 </div>
                 <div className="d-flex flex-column justify-content-start align-items-start ms-3">
                   <Typography
-                    className="ps-3  fs-4  text-light"
+                    className=" fs-4  text-light"
                     style={{ flex: 1, overflowWrap: "break-word" }}
                   >
                     Webinar On IoT Security
                   </Typography>
                   <Typography
-                    className="ps-3 fs-6 text-light"
+                    className=" fs-6 text-light"
                     style={{ flex: 1, overflowWrap: "break-word" }}
                   >
                     (WISE-2022) organized by SETS Chennai & C-DAC Hyderabad in

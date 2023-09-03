@@ -14,7 +14,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import NotFound from "./components/NotFound";
 import "react-toastify/dist/ReactToastify.css";
 import { useMode } from "./theme";
 import AboutUs from "./components/AboutUs";
@@ -26,7 +25,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import { tokens } from "./theme";
 import { color } from "@mui/system";
-
+import Event from "./components/Event";
 function App() {
   const [theme, colorMode] = useMode();
   const themes = useTheme();
@@ -49,14 +48,14 @@ function App() {
             <TopBar />
           </Box>
 
-          <Box display="flex" flexDirection="column" flexGrow={1}>
+          <Box display="flex" flexDirection="column" flexGrow={1} py={2}>
             <Routes>
               <Route path="/about" element={<AboutUs />} />
               <Route path="/committee" element={<ExecutiveCommittee />} />
+              <Route path="/events" element={<Event />} />
               <Route path="/membership" element={<Membership />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<Home />} />
-              <Route path="*" element={<NotFound />} />
             </Routes>
           </Box>
 
