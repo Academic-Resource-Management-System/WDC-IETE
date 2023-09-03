@@ -108,68 +108,64 @@ const Footer = () => {
                 </Nav.Link>
               </Nav.Item>
             </Nav>
-
-            <center>
-              {" "}
-              <Nav className="flex-column">
-                <Nav.Item>
+            <Nav className="flex-column">
+              <Nav.Item>
+                <Typography
+                  className="px-3 fs-5 "
+                  style={{ color: colors.topbar[200] }}
+                >
+                  Courses Offered
+                </Typography>
+                <Nav.Link as={Link} to="/cat">
                   <Typography
-                    className="fs-5 px-3"
+                    className="fs-6"
                     style={{ color: colors.topbar[200] }}
                   >
-                    Courses Offered
+                    Course 1
                   </Typography>
-                  <Nav.Link as={Link} to="/cat">
-                    <Typography
-                      className="fs-6"
-                      style={{ color: colors.topbar[200] }}
-                    >
-                      Course 1
-                    </Typography>
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link as={Link} to="/cat">
-                    <Typography
-                      className="fs-6"
-                      style={{ color: colors.topbar[200] }}
-                    >
-                      Course 2
-                    </Typography>
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link as={Link} to="/cat">
-                    <Typography
-                      className="fs-6"
-                      style={{ color: colors.topbar[200] }}
-                    >
-                      Course 3
-                    </Typography>{" "}
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link as={Link} to="/cat">
-                    <Typography
-                      className="fs-6"
-                      style={{ color: colors.topbar[200] }}
-                    >
-                      Course 4
-                    </Typography>{" "}
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link as={Link} to="/cat">
-                    <Typography
-                      className="fs-6"
-                      style={{ color: colors.topbar[200] }}
-                    >
-                      Course 5
-                    </Typography>{" "}
-                  </Nav.Link>
-                </Nav.Item>
-              </Nav>{" "}
-            </center>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/cat">
+                  <Typography
+                    className="fs-6"
+                    style={{ color: colors.topbar[200] }}
+                  >
+                    Course 2
+                  </Typography>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/cat">
+                  <Typography
+                    className="fs-6"
+                    style={{ color: colors.topbar[200] }}
+                  >
+                    Course 3
+                  </Typography>{" "}
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/cat">
+                  <Typography
+                    className="fs-6"
+                    style={{ color: colors.topbar[200] }}
+                  >
+                    Course 4
+                  </Typography>{" "}
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/cat">
+                  <Typography
+                    className="fs-6"
+                    style={{ color: colors.topbar[200] }}
+                  >
+                    Course 5
+                  </Typography>{" "}
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>{" "}
           </Grid>
 
           <Grid item xs={12} md={4}>
