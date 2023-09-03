@@ -7,6 +7,7 @@ import {
   IconButton,
   useTheme,
 } from "@mui/material";
+import { useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -18,10 +19,15 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import PhoneIcon from "@mui/icons-material/Phone";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { tokens } from "../theme";
+import { useLocation } from "react-router-dom";
 import Grow from "@mui/material/Grow";
 const ExecutiveCommittee = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]); // Listen to changes in the pathname
 
   return (
     <>

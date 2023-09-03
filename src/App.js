@@ -29,13 +29,14 @@ import { color } from "@mui/system";
 import Event from "./components/Event";
 import TopRightIcon from "./components/TopRightIcon";
 import PlayCircleFilledRoundedIcon from "@mui/icons-material/PlayCircleFilledRounded";
+import { useLocation } from "react-router-dom"; // Import useLocation from react-router-dom
 
 function App() {
   const [theme, colorMode] = useMode();
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" }); // You can use 'smooth' for a smooth scroll effect
   };
+
   return (
     <Router>
       <ThemeProvider theme={theme}>

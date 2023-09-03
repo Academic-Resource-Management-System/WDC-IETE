@@ -14,9 +14,14 @@ import { MdEmail } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
 import Fade from "@mui/material/Fade";
 import Grow from "@mui/material/Grow";
-
+import { useLocation } from "react-router-dom";
 import { tokens } from "../theme";
 const Contact = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]); // Listen to changes in the pathname
+
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [checked, setChecked] = useState(false);

@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import {
   Grid,
   Paper,
@@ -11,9 +12,16 @@ import Button from "@mui/material/Button";
 import Carousel from "react-material-ui-carousel"; // Corrected import statement
 import { tokens } from "../theme";
 import im from "../A.jpg";
+import { Collapse, Grow } from "@mui/material";
+import { useLocation } from "react-router-dom";
 function Item(props) {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]); // Listen to changes in the pathname
+
   return (
     <div className="container">
       <Paper
@@ -96,11 +104,11 @@ const Home = () => {
       date: "17th October 2023 (Saturday)",
     },
     {
-      name: "Professional Resume Writing",
+      name: "EVOLUTION OF COMPUTING AND SKILL SETS FOR THE FUTURE",
       description:
-        "Mr.M.Vigneshwaran (Softskill Trainer/ e-learning developer) gave a guidance session on RESUME building in a Professional manner",
+        "Mr.MallikMahalingam (CEO,Springpath (CISCO)) commenced with the evolution of hardware and operating software",
       pic: "http://ietechennai.in/assets/img/events/Slide3.jpeg",
-      date: "17/10/2023",
+      date: "17th October 2023 (Saturday)",
     },
     {
       name: "EASE THE ERROR 1.0",
@@ -108,6 +116,7 @@ const Home = () => {
         "24 Hour national level hackathon which challenged students to think out-of-the-box and offer innovative ideas",
       pic: "http://ietechennai.in/assets/img/events/Slide12.jpeg",
       date: "10/10/2023 & 11/10/2023",
+      date: "10th October 2023 (Sunday) & 11th October 2023 (Monday) ",
     },
     {
       name: "5G AND IT’S HISTORYs",
@@ -115,9 +124,30 @@ const Home = () => {
         "Mr.SunderPalaniraj (Director IC-design, TDKInvenSense) gave a technical talk on communication networks",
       pic: "http://ietechennai.in/assets/img/events/Slide2.jpeg",
       date: "20/09/2023",
+      date: "20th November 2023 (Monday)",
     },
   ];
 
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if the scroll position is below a certain threshold to trigger the fade-in effect
+      if (window.scrollY > 100) {
+        setChecked(true);
+      } else {
+        setChecked(false);
+      }
+    };
+
+    // Add scroll event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="">
       <div
@@ -133,21 +163,23 @@ const Home = () => {
       >
         <Grid container spacing={2} className="h-100">
           <Grid item xs={12} md={6}>
-            {" "}
             <div className="d-flex flex-column h-100 justify-content-center mx-md-5">
-              {" "}
-              <Typography
-                className="fs-1 text-light"
-                style={{ fontFamily: "'Poppins', sans-serif" }}
-              >
-                "Learning Today,
-              </Typography>
-              <Typography
-                className="fs-1 ms-3 ps-md-1 text-light"
-                style={{ fontFamily: "'Poppins', sans-serif" }}
-              >
-                Leading Tomorrow"
-              </Typography>
+              <Grow in={true} timeout={1000}>
+                <Typography
+                  className="fs-1 text-light"
+                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                >
+                  "Learning Today,
+                </Typography>
+              </Grow>
+              <Grow in={true} timeout={2000}>
+                <Typography
+                  className="fs-1 ms-3 ps-md-1 text-light"
+                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                >
+                  Leading Tomorrow"
+                </Typography>
+              </Grow>
             </div>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -222,6 +254,7 @@ const Home = () => {
       >
         Recent Events
       </Typography>
+
       <Carousel // Use <Carousel> from react-material-ui-carousel
         animation="slide"
         autoPlay={true}

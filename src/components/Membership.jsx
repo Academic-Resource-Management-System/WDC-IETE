@@ -12,10 +12,18 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { tokens } from "../theme";
 import { Grow } from "@mui/material";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Membership = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]); // Listen to changes in the pathname
+
   return (
     <>
       <div className="container-fluid  w-100 py-3 ">

@@ -13,11 +13,15 @@ import AnimatedNumber from "./AnimatedNumber";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import { Grow, Zoom } from "@mui/material";
 import { useState, useEffect } from "react";
-
+import { useLocation } from "react-router-dom";
 const AboutUs = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [checked, setChecked] = useState(false);
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]); // Listen to changes in the pathname
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,7 +86,7 @@ const AboutUs = () => {
             <Typography variant="h2" style={{ overflowWrap: "break-word" }}>
               IETE
             </Typography>
-            <Grow in={true}>
+            <Grow in={true} timeout={1000}>
               <Typography
                 variant="h5"
                 className="mt-2"
@@ -115,7 +119,7 @@ const AboutUs = () => {
             </Grow>
           </Grid>
 
-          <Grow in={true} timeout={1000}>
+          <Grow in={true} timeout={2000}>
             <Grid item xs={12} md={6}>
               <Carousel className="h-100 pt-4">
                 {carouselItems.map((item, index) => (
