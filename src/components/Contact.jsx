@@ -1,5 +1,10 @@
 import React from "react";
 import { Grid, Paper, Typography, Avatar, TextField } from "@mui/material";
+import { AddressMap } from "./Map";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { MdEmail } from "react-icons/md";
+import { ImLocation } from "react-icons/im";
+
 const Contact = () => {
   return (
     <>
@@ -41,6 +46,8 @@ const Contact = () => {
                 src="/static/images/avatar/1.jpg"
                 sx={{ width: 56, height: 56 }}
               />
+              <div className="ps-3 py-2">
+                <ImLocation /> {/* Use ImLocation icon */}
               <Typography
                 variant="h5"
                 className="ps-3 py-2"
@@ -49,6 +56,8 @@ const Contact = () => {
                 Location: IETE Chennai centre, No: 37, Conran Smith Road
                 Entrance Peters Road, Gopalapuram,Chennai, Tamil Nadu 600086
               </Typography>
+              </div>
+
             </Paper>
             <Paper
               className="px-2 py-3 my-2"
@@ -63,6 +72,8 @@ const Contact = () => {
                 src="/static/images/avatar/1.jpg"
                 sx={{ width: 56, height: 56 }}
               />
+              <div className="ps-3 py-2">
+                <MdEmail /> {/* Use MdEmail icon */}
               <Typography
                 variant="h5"
                 className="ps-3 py-2"
@@ -70,6 +81,8 @@ const Contact = () => {
               >
                 Email: ietechennai@gmail.com
               </Typography>
+              </div>
+
             </Paper>
             <Paper
               className="px-2 py-3 my-2"
@@ -84,6 +97,8 @@ const Contact = () => {
                 src="/static/images/avatar/1.jpg"
                 sx={{ width: 56, height: 56 }}
               />
+              <div className="ps-3 py-2">
+                <BiSolidPhoneCall /> {/* Use BiSolidPhoneCall icon */}
               <Typography
                 variant="h5"
                 className="ps-3 py-2"
@@ -91,6 +106,7 @@ const Contact = () => {
               >
                 Call: 044 2835 0773
               </Typography>
+              </div>
             </Paper>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -133,7 +149,11 @@ const Contact = () => {
           </Grid>
         </Grid>
       </div>
-      <div className="container mt-4 ">MAP</div>
+      <div className="container mt-4 ">
+
+        <AddressMap/>
+
+      </div>
     </>
   );
 };

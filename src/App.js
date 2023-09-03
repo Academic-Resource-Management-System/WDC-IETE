@@ -14,6 +14,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import NotFound from "./components/NotFound";
 import "react-toastify/dist/ReactToastify.css";
 import { useMode } from "./theme";
 import AboutUs from "./components/AboutUs";
@@ -55,6 +56,7 @@ function App() {
               <Route path="/membership" element={<Membership />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<Home />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Box>
 
