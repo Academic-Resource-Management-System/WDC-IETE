@@ -22,6 +22,15 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import { Grow } from "@mui/material";
 import { tokens } from "../theme";
 import { useLocation } from "react-router-dom";
+import img12 from "../img/Slide12.jpeg";
+import img2 from "../img/Slide2.jpeg";
+import img3 from "../img/Slide3.jpeg";
+import img4 from "../img/Slide4.jpeg";
+import img11 from "../img/Slide11.jpeg";
+import img10 from "../img/Slide10.jpeg";
+import img9 from "../img/Slide9.jpeg";
+import img1 from "../img/Slide1.jpeg";
+
 function Item(props) {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -164,28 +173,28 @@ const Event = () => {
       name: "Professional Resume Writing",
       description:
         "Mr.M.Vigneshwaran (Softskill Trainer/ e-learning developer) gave a guidance session on RESUME building in a Professional manner",
-      pic: "http://www.ietechennai.in/assets/img/events/Slide4.jpeg",
+      pic: img4,
       date: "17th October 2023 (Saturday)",
     },
     {
       name: "EVOLUTION OF COMPUTING AND SKILL SETS FOR THE FUTURE",
       description:
         "Mr.MallikMahalingam (CEO,Springpath (CISCO)) commenced with the evolution of hardware and operating software",
-      pic: "http://ietechennai.in/assets/img/events/Slide3.jpeg",
+      pic: img3,
       date: "17th October 2023 (Saturday)",
     },
     {
       name: "EASE THE ERROR 1.0",
       description:
         "24 Hour national level hackathon which challenged students to think out-of-the-box and offer innovative ideas",
-      pic: "http://ietechennai.in/assets/img/events/Slide12.jpeg",
+      pic: img12,
       date: "10th October 2023 (Sunday) & 11th October 2023 (Monday) ",
     },
     {
       name: "5G AND IT’S HISTORYs",
       description:
         "Mr.SunderPalaniraj (Director IC-design, TDKInvenSense) gave a technical talk on communication networks",
-      pic: "http://ietechennai.in/assets/img/events/Slide2.jpeg",
+      pic: img2,
       date: "20th November 2023 (Monday)",
     },
     {
@@ -199,28 +208,28 @@ const Event = () => {
       name: "COVID 19 AND AI SOLUTIONS",
       description:
         "Quiz on ‘COVID19 and AI Solutions”. The event started with the note on ‘Revering of knowledge",
-      pic: "http://www.ietechennai.in/assets/img/events/Slide1.jpeg",
+      pic: img1,
       date: "20th September 2023 (Monday)",
     },
     {
       name: "OCEAN TECHNOLOGY IN IOT",
       description:
         "Mr.TATA SUDHAKAR (former IETE Che Chairman) explained about the role of Ocean Technology for society, Coastal Protection",
-      pic: "http://www.ietechennai.in/assets/img/events/Slide11.jpeg",
+      pic: img11,
       date: "20th September 2023 (Monday)",
     },
     {
       name: "A REALISTIC APPROACH TOWARDS DATA SCIENCE",
       description:
         "Mr.Sivasubramanian (Business Intelligence & Data Analyst)covered various topics on data science like the sectors",
-      pic: "http://www.ietechennai.in/assets/img/events/Slide10.jpeg",
+      pic: img10,
       date: "23th August 2023 (Friday)",
     },
     {
       name: "MATLAB PROGRAMMING TECHNIQUES",
       description:
         "DR.Markkandan (Asst. Professor, Anand Institute of Higher Technology) talked about MATLAB Fundamentals, Applications, Sample Matlab",
-      pic: "http://www.ietechennai.in/assets/img/events/Slide9.jpeg",
+      pic: img9,
 
       date: "14th August 2023 (Saturday)",
     },

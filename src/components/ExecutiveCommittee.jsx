@@ -21,6 +21,15 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import { tokens } from "../theme";
 import { useLocation } from "react-router-dom";
 import Grow from "@mui/material/Grow";
+import img1 from "../img/6.jpg";
+import img2 from "../img/tata_sudhakar.jpeg";
+import img3 from "../img/4.jpg";
+import img4 from "../img/5.jpg";
+import img5 from "../img/arunkumar.jpeg";
+import img6 from "../img/dr_vaishali.jpg";
+import img7 from "../img/arun.jpeg";
+import img8 from "../img/sumathi.jpeg";
+
 const ExecutiveCommittee = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -60,7 +69,7 @@ const ExecutiveCommittee = () => {
               <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
                 <CardMedia
                   sx={{ height: 250 }}
-                  image="http://www.ietechennai.in/assets/img/trainers/6.jpg"
+                  image={img1}
                   title="green iguana"
                 />
 
@@ -103,7 +112,7 @@ const ExecutiveCommittee = () => {
               <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
                 <CardMedia
                   sx={{ height: 250 }}
-                  image="http://ietechennai.in/assets/img/trainers/tata_sudhakar.jpeg"
+                  image={img2}
                   title="green iguana"
                 />
                 <CardContent>
@@ -187,7 +196,7 @@ const ExecutiveCommittee = () => {
               <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
                 <CardMedia
                   sx={{ height: 250, width: "100%" }}
-                  image="http://ietechennai.in/assets/img/trainers/4.jpg"
+                  image={img3}
                   title="green iguana"
                 />
                 <CardContent>
@@ -218,6 +227,7 @@ const ExecutiveCommittee = () => {
               </Card>
             </Grid>
           </Grow>
+
           <Grow in={true} timeout={4000}>
             <Grid
               item
@@ -259,6 +269,7 @@ const ExecutiveCommittee = () => {
               </Card>
             </Grid>
           </Grow>
+
           <Grow in={true} timeout={4000}>
             <Grid
               item
@@ -341,6 +352,7 @@ const ExecutiveCommittee = () => {
               </Card>
             </Grid>
           </Grow>
+
           <Grow in={true} timeout={4000}>
             <Grid
               item
@@ -392,7 +404,7 @@ const ExecutiveCommittee = () => {
               <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
                 <CardMedia
                   sx={{ height: 250 }}
-                  image="http://ietechennai.in/assets/img/trainers/arunkumar.jpeg"
+                  image={img5}
                   title="green iguana"
                 />
                 <CardContent>
@@ -474,7 +486,7 @@ const ExecutiveCommittee = () => {
               <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
                 <CardMedia
                   sx={{ height: 250 }}
-                  image="http://ietechennai.in/assets/img/trainers/dr_vaishali.jpg"
+                  image={img6}
                   title="green iguana"
                 />
                 <CardContent>
@@ -515,7 +527,7 @@ const ExecutiveCommittee = () => {
               <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
                 <CardMedia
                   sx={{ height: 250 }}
-                  image="http://ietechennai.in/assets/img/trainers/arun.jpeg"
+                  image={img7}
                   title="green iguana"
                 />
                 <CardContent>
@@ -556,7 +568,7 @@ const ExecutiveCommittee = () => {
               <Card sx={{ minWidth: 275, backgroundColor: colors.topbar[300] }}>
                 <CardMedia
                   sx={{ height: 250 }}
-                  image="http://ietechennai.in/assets/img/trainers/sumathi.jpeg"
+                  image={img8}
                   title="green iguana"
                 />
                 <CardContent>
