@@ -259,7 +259,7 @@ const ExecutiveCommittee = () => {
               </Card>
             </Grid>
           </Grow>
-          <Grow in={true} timeout={5000}>
+          <Grow in={true} timeout={4000}>
             <Grid
               item
               xs={12}
@@ -300,7 +300,7 @@ const ExecutiveCommittee = () => {
               </Card>
             </Grid>
           </Grow>
-          <Grow in={true} timeout={6000}>
+          <Grow in={true} timeout={4000}>
             <Grid
               item
               xs={12}
@@ -341,7 +341,7 @@ const ExecutiveCommittee = () => {
               </Card>
             </Grid>
           </Grow>
-          <Grow in={true} timeout={7000}>
+          <Grow in={true} timeout={4000}>
             <Grid
               item
               xs={12}
@@ -382,7 +382,7 @@ const ExecutiveCommittee = () => {
               </Card>
             </Grid>
           </Grow>
-          <Grow in={true} timeout={8000}>
+          <Grow in={true} timeout={5000}>
             <Grid
               item
               xs={12}
@@ -423,7 +423,7 @@ const ExecutiveCommittee = () => {
               </Card>
             </Grid>
           </Grow>
-          <Grow in={true} timeout={9000}>
+          <Grow in={true} timeout={5000}>
             <Grid
               item
               xs={12}
@@ -464,7 +464,7 @@ const ExecutiveCommittee = () => {
               </Card>
             </Grid>
           </Grow>
-          <Grow in={true} timeout={10000}>
+          <Grow in={true} timeout={5000}>
             <Grid
               item
               xs={12}
@@ -505,7 +505,7 @@ const ExecutiveCommittee = () => {
               </Card>
             </Grid>
           </Grow>
-          <Grow in={true} timeout={11000}>
+          <Grow in={true} timeout={5000}>
             <Grid
               item
               xs={12}
@@ -546,7 +546,7 @@ const ExecutiveCommittee = () => {
               </Card>
             </Grid>
           </Grow>
-          <Grow in={true} timeout={12000}>
+          <Grow in={true} timeout={5000}>
             <Grid
               item
               xs={12}

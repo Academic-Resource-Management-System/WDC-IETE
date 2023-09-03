@@ -6,6 +6,7 @@ import {
   Typography,
   Avatar,
   TextField,
+  Button,
   useTheme,
 } from "@mui/material";
 import { AddressMap } from "./Map";
@@ -212,6 +213,19 @@ const Contact = () => {
                 fullWidth
                 variant="filled"
               />
+              <Button
+                variant="contained"
+                style={{
+                  fontWeight: "bold",
+                  textTransform: "none",
+                  backgroundColor: colors.topbar[200],
+
+                  width: "100%",
+                }}
+                className="my-3"
+              >
+                Submit
+              </Button>
             </Grid>
           </Grow>
         </Grid>

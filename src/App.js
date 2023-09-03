@@ -30,13 +30,16 @@ import Event from "./components/Event";
 import TopRightIcon from "./components/TopRightIcon";
 import PlayCircleFilledRoundedIcon from "@mui/icons-material/PlayCircleFilledRounded";
 import { useLocation } from "react-router-dom"; // Import useLocation from react-router-dom
+import NotFound from "./components/NotFound";
 
 function App() {
   const [theme, colorMode] = useMode();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" }); // You can use 'smooth' for a smooth scroll effect
   };
-
+  const pathname = window.location.pathname.split("/");
+  const names = ["", "about", "committee", "events", "membership", "contact"];
+  console.log(!names.includes(pathname[1]));
   return (
     <Router>
       <ThemeProvider theme={theme}>
@@ -44,15 +47,16 @@ function App() {
         <ToastContainer />
 
         <Box display="flex" flexDirection="column" minHeight="100vh">
-          {/* Header */}{" "}
-          <Box
-            position="sticky"
-            top={0}
-            zIndex={1000}
-            //boxShadow="0px 1px 5px rgba(0, 0, 0, 0.1)"
-          >
-            <TopBar />
-          </Box>
+          {names.includes(pathname[1]) && pathname.length === 2 ? (
+            <Box
+              position="sticky"
+              top={0}
+              zIndex={1000}
+              //boxShadow="0px 1px 5px rgba(0, 0, 0, 0.1)"
+            >
+              <TopBar />
+            </Box>
+          ) : null}
           <Box display="flex" flexDirection="column" flexGrow={1} py={2}>
             <Routes>
               <Route path="/about" element={<AboutUs />} />
@@ -61,6 +65,7 @@ function App() {
               <Route path="/membership" element={<Membership />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<Home />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>{" "}
             <Typography
               component="p"
@@ -85,12 +90,14 @@ function App() {
             </Typography>
           </Box>
           {/* Footer */}
-          <Box
+          {names.includes(pathname[1]) && pathname.length === 2 ? (
+            <Box
 
-          //boxShadow="0px -1px 5px rgba(0, 0, 0, 0.1)"
-          >
-            <Footer />
-          </Box>
+            //boxShadow="0px -1px 5px rgba(0, 0, 0, 0.1)"
+            >
+              <Footer />
+            </Box>
+          ) : null}
         </Box>
       </ThemeProvider>
     </Router>
