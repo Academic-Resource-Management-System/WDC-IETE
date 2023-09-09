@@ -116,7 +116,7 @@ const Footer = () => {
                 >
                   Courses Offered
                 </Typography>
-                <Nav.Link as={Link} to="/cat">
+                <Nav.Link as={Link} to="/course1/">
                   <Typography
                     className="fs-6"
                     style={{ color: colors.topbar[200] }}
@@ -126,7 +126,7 @@ const Footer = () => {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/cat">
+                <Nav.Link as={Link} to="/course2/">
                   <Typography
                     className="fs-6"
                     style={{ color: colors.topbar[200] }}
@@ -136,7 +136,7 @@ const Footer = () => {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/cat">
+                <Nav.Link as={Link} to="/course3/">
                   <Typography
                     className="fs-6"
                     style={{ color: colors.topbar[200] }}
@@ -146,7 +146,7 @@ const Footer = () => {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/cat">
+                <Nav.Link as={Link} to="/course4/">
                   <Typography
                     className="fs-6"
                     style={{ color: colors.topbar[200] }}
@@ -156,7 +156,7 @@ const Footer = () => {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/cat">
+                <Nav.Link as={Link} to="/course5/">
                   <Typography
                     className="fs-6"
                     style={{ color: colors.topbar[200] }}

@@ -66,18 +66,17 @@ const Contact = () => {
         </Typography>
       </div>
       <div className="container  ">
-        <Grid container spacing={2} className="my-2">
+        <Grid container spacing={4} className="my-2">
           <Grow in={true} timeout={1000}>
             <Grid
               item
               xs={12}
               md={6}
-              className="d-flex flex-column align-items-center justify-content-center"
+              className="d-flex flex-column align-items-center  justify-content-center"
             >
               <Paper
-                className="px-2 py-3 my-2"
+                className="px-2 w-100 py-3 my-2"
                 style={{
-                  width: "75%",
                   display: "flex",
                   alignItems: "center", // Center vertically
                   backgroundColor: colors.topbar[300],
@@ -109,9 +108,8 @@ const Contact = () => {
                 </div>
               </Paper>
               <Paper
-                className="px-2 py-3 my-2"
+                className="px-2 w-100 py-3 my-2"
                 style={{
-                  width: "75%",
                   display: "flex",
                   alignItems: "center", // Center vertically
                   backgroundColor: colors.topbar[300],
@@ -141,9 +139,8 @@ const Contact = () => {
                 </div>
               </Paper>
               <Paper
-                className="px-2 py-3 my-2"
+                className="px-2 py-3 w-100 my-2"
                 style={{
-                  width: "75%",
                   display: "flex",
                   alignItems: "center", // Center vertically
                   backgroundColor: colors.topbar[300],
