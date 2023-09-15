@@ -6,6 +6,7 @@ import {
   Avatar,
   IconButton,
   useTheme,
+  Tooltip,
 } from "@mui/material";
 import { useEffect } from "react";
 import Card from "@mui/material/Card";
@@ -214,9 +215,11 @@ const ExecutiveCommittee = () => {
                   </Typography>
                 </CardContent>
                 <CardActions className="d-flex justify-content-evenly">
-                  <IconButton aria-label="Facebook">
-                    <LinkedInIcon className="fs-3" />
-                  </IconButton>
+                  <Tooltip title="venkateswaran.iete@gmail.com">
+                    <IconButton aria-label="Facebook">
+                      <LinkedInIcon className="fs-3" />
+                    </IconButton>
+                  </Tooltip>
                   <IconButton aria-label="Facebook">
                     <PhoneIcon className="fs-3" />
                   </IconButton>
