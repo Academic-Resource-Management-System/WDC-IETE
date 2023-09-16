@@ -14,7 +14,7 @@ import { tokens } from "../theme";
 import { Grow } from "@mui/material";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 const Membership = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -247,96 +247,133 @@ const Membership = () => {
               >
                 Forms
               </Typography>
-              <Paper
-                className="px-2 py-3 my-2 "
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "center", // Center vertically
-                  backgroundColor: colors.topbar[300],
-                }}
+              <Link
+                to="https://iete.org/IETE1_CORPUP.pdf"
+                className="w-100"
+                style={{ textDecoration: "none" }}
               >
-                <Avatar sx={{ width: 56, height: 56 }} />
-                <Typography
-                  variant="h5"
-                  className="ps-3 py-2"
-                  style={{ flex: 1, overflowWrap: "break-word" }}
+                <Paper
+                  className="px-2 py-3 my-2 "
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center", // Center vertically
+                    backgroundColor: colors.topbar[300],
+                  }}
                 >
-                  Corporate Member
-                </Typography>
-              </Paper>
-              <Paper
-                className="px-2  my-2 py-3 "
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "center", // Center vertically
-                  backgroundColor: colors.topbar[300],
-                }}
+                  <Avatar sx={{ width: 56, height: 56 }} />
+                  <Typography
+                    variant="h5"
+                    className="ps-3 py-2"
+                    style={{ flex: 1, overflowWrap: "break-word" }}
+                  >
+                    Corporate Member
+                  </Typography>
+                </Paper>
+              </Link>
+
+              <Link
+                to="https://iete.org/CE_Formup.pdf"
+                className="w-100"
+                style={{ textDecoration: "none" }}
               >
-                <Avatar sx={{ width: 56, height: 56 }} />
-                <Typography
-                  variant="h5"
-                  className="ps-3 py-2"
-                  style={{ flex: 1, overflowWrap: "break-word" }}
+                <Paper
+                  className="px-2  my-2 py-3 "
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center", // Center vertically
+                    backgroundColor: colors.topbar[300],
+                  }}
                 >
-                  Chartered Engineer
-                </Typography>
-              </Paper>
-              <Paper
-                className="px-2  my-2 py-3 "
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "center", // Center vertically
-                  backgroundColor: colors.topbar[300],
-                }}
+                  <Avatar sx={{ width: 56, height: 56 }} />
+                  <Typography
+                    variant="h5"
+                    className="ps-3 py-2"
+                    style={{ flex: 1, overflowWrap: "break-word" }}
+                  >
+                    Chartered Engineer
+                  </Typography>
+                </Paper>
+              </Link>
+
+              <Link
+                to="https://iete.org/orgmemup.pdf"
+                className="w-100"
+                style={{ textDecoration: "none" }}
               >
-                <Avatar sx={{ width: 56, height: 56 }} />
-                <Typography
-                  variant="h5"
-                  className="ps-3 py-2"
-                  style={{ flex: 1, overflowWrap: "break-word" }}
+                <Paper
+                  className="px-2  my-2 py-3 "
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center", // Center vertically
+                    backgroundColor: colors.topbar[300],
+                  }}
                 >
-                  Organisational Member
-                </Typography>
-              </Paper>
-              <Paper
-                className="px-2 my-2 py-3 "
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "center", // Center vertically
-                  backgroundColor: colors.topbar[300],
-                }}
+                  <Avatar sx={{ width: 56, height: 56 }} />
+                  <Typography
+                    variant="h5"
+                    className="ps-3 py-2"
+                    style={{ flex: 1, overflowWrap: "break-word" }}
+                  >
+                    Organisational Member
+                  </Typography>
+                </Paper>
+              </Link>
+
+              <Link
+                to="https://iete.org/AMMEM.pdf"
+                className="w-100"
+                style={{ textDecoration: "none" }}
               >
-                <Avatar sx={{ width: 56, height: 56 }} />
-                <Typography
-                  variant="h5"
-                  className="ps-3 py-2"
-                  style={{ flex: 1, overflowWrap: "break-word" }}
+                <Paper
+                  className="px-2 my-2 py-3 "
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center", // Center vertically
+                    backgroundColor: colors.topbar[300],
+                  }}
                 >
-                  AMIETE
-                </Typography>
-              </Paper>
-              <Paper
-                className="px-2 my-2 py-3 "
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "center", // Center vertically
-                  backgroundColor: colors.topbar[300],
-                }}
+                  <Avatar sx={{ width: 56, height: 56 }} />
+                  <Typography
+                    variant="h5"
+                    className="ps-3 py-2"
+                    style={{ flex: 1, overflowWrap: "break-word" }}
+                  >
+                    AMIETE
+                  </Typography>
+                </Paper>
+              </Link>
+
+              <Link
+                to="https://iete.org/DIPMEM.pdf"
+                className="w-100"
+                style={{ textDecoration: "none" }}
               >
-                <Avatar sx={{ width: 56, height: 56 }} />
-                <Typography
-                  variant="h5"
-                  className="ps-3 py-2"
-                  style={{ flex: 1, overflowWrap: "break-word" }}
+                <Paper
+                  className="px-2 my-2 py-3 "
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center", // Center vertically
+                    backgroundColor: colors.topbar[300],
+                  }}
                 >
-                  DIPIETE
-                </Typography>
-              </Paper>
+                  <Avatar sx={{ width: 56, height: 56 }} />
+                  <Typography
+                    variant="h5"
+                    className="ps-3 py-2"
+                    style={{
+                      flex: 1,
+                      overflowWrap: "break-word",
+                    }}
+                  >
+                    DIPIETE
+                  </Typography>
+                </Paper>
+              </Link>
             </Grid>
           </Grow>
         </Grid>

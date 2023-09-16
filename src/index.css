@@ -8,3 +8,12 @@
   flex: 1;
   overflow-wrap: "break-word";
 }
+.nav-link {
+  color: inherit;
+}
+.nav-link:hover {
+  color: inherit;
+}
+.nav-link:focus {
+  color: inherit;
+}

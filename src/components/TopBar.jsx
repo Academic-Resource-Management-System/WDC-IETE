@@ -29,7 +29,7 @@ import img from "../android-chrome-192x192.png";
 import img1 from "../DD2.png";
 import { Link } from "react-router-dom";
 import { tokens } from "../theme";
-import { Nav, NavDropdown } from "react-bootstrap";
+import { Nav, NavDropdown, Navbar } from "react-bootstrap";
 
 const pages = [
   "Home",
@@ -208,6 +208,7 @@ function TopBar() {
           >
             IETE
           </Typography>
+
           <Box
             sx={{
               flexGrow: 1,
@@ -215,22 +216,19 @@ function TopBar() {
               justifyContent: "space-evenly",
             }}
           >
-            <Nav className="flex-row">
+            <Navbar className="flex-row">
               {pages.map((page, i) => (
                 <React.Fragment key={page}>
                   {page.includes(":") ? (
                     <NavDropdown
-                      title={
-                        <span
-                          className="fs-6"
-                          style={{
-                            color: colors.topbar[200],
-                          }}
-                        >
-                          {page.split(":")[0]}
-                        </span>
-                      }
+                      title={page.split(":")[0]}
                       id={`dropdown-${i}`}
+                      className="fs-6 "
+                      style={{
+                        color: colors.topbar[200],
+
+                        textDecoration: "none",
+                      }}
                     >
                       {page.split(":")[1] === "a1" ? (
                         <>
@@ -261,7 +259,13 @@ function TopBar() {
                       //   onClick={handleCloseNavMenu}
                       sx={{ my: 2, display: "block" }}
                     >
-                      <Nav.Link as={Link} to={`${pagesLink[i]}`}>
+                      <Nav.Link
+                        as={Link}
+                        to={`${pagesLink[i]}`}
+                        style={{
+                          color: colors.topbar[200],
+                        }}
+                      >
                         <Typography
                           className="fs-6"
                           style={{
@@ -275,7 +279,7 @@ function TopBar() {
                   )}
                 </React.Fragment>
               ))}
-            </Nav>
+            </Navbar>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
